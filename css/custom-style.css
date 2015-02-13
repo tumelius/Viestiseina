@@ -1,0 +1,117 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.navbar-default {
+  background-color: #9BC48B;
+  height: auto;
+  border-color: #607A56;
+  padding: 0px;
+}
+
+.navbar-header {
+    height: 60px;
+}
+
+.navbar-brand {
+    margin: 0;
+}
+
+.navbar-brand > img {
+    display: inline-block;
+    position: relative;   
+}
+
+.kupla {
+  position: relative;
+  background-color:#ddd;
+  margin: 0;
+  margin-top: 20px;
+  padding:20px;
+  text-align: left;
+  font-size: 2em;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  -webkit-box-shadow: 0px 0 3px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0 3px rgba(0,0,0,0.25);
+  box-shadow: 0px 0 3px rgba(0,0,0,0.25); 
+}
+
+.kupla:after {
+  position: absolute;
+  display: block;
+  content: "";  
+  border-color: #ddd transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height:0;
+  width:0;
+  position:absolute;
+  bottom:-19px;
+  left:1em;
+}
+.sender {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Otsikon animointi */
+.cd-headline.rotate-1 .cd-words-wrapper {
+  display: inline-block;
+  perspective: 300px;
+}
+
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+ 
+.cd-headline.rotate-1 b.is-visible {
+  position: relative;
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+ 
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
